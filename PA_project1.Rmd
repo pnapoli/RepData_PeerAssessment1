@@ -1,6 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
+output: "FitBit Analysis"
   html_document:
     keep_md: true
 ---
