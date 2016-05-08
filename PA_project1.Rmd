@@ -5,7 +5,7 @@ output:
     keep_md: true
 ---
 
-## Dowloading the Data
+## Data Description
 The data for this assignment was downloaded from the course web
 url:
 
@@ -26,8 +26,17 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 
 
 ## Loading and preprocessing the data
+Download, unzip and load data into data frame `data`. 
+```{r}
+if(!file.exists("getdata-projectfiles-UCI HAR Dataset.zip")) {
+        temp <- tempfile()
+        download.file("http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip",temp)
+        unzip(temp)
+        unlink(temp)
+}
 
-
+data <- read.csv("activity.csv")
+```
 
 ## What is mean total number of steps taken per day?
 
